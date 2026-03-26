@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<h1>Quiz Questions</h1>
+
+<div class="container">
+    <form id="quizForm">
+        <div id="questions"></div>
+        <button type="submit">Submit Quiz</button>
+    </form>
+
+    <h2 id="result"></h2>
+</div>
+
+<script>
+let questions = [];
+
+fetch("/question/all")
+    .then(response => response.json())
+    .then(data => {
+        console.log("Total Questions:", data.length);
+        questions = data;
+        displayQuestions();
+    })
+    .catch(error => console.error(error));
+
+function displayQuestions() {
+    const container = document.getElementById("questions");
+    container.innerHTML = "";
+
+    questions.forEach((q, index) => {
+
+        const div = document.createElement("div");
+        div.classList.add("question-box");
+
+        div.innerHTML = `<h3>${index + 1}. ${q.questionTitle}</h3>`;
+
+        const options = [q.option1, q.option2, q.option3, q.option4];
+
+        options.forEach(option => {
+            div.innerHTML += `
+                <label>
+                    <input type="radio" name="question${index}" value="${option}">
+                    ${option}
+                </label><br>
+            `;
+        });
+
+        container.appendChild(div);
+    });
+}
+
+document.getElementById("quizForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let score = 0;
+
+    questions.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="question${index}"]:checked`);
+
+        if (selected && selected.value === q.rightAnswer) {
+            score++;
+        }
+    });
+
+    document.getElementById("result").innerText =
+        "Your Score: " + score + " / " + questions.length;
+});
+</script>
+
+</body>
+</html>
