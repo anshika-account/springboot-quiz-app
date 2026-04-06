@@ -1,0 +1,122 @@
+[
+  {
+    "questionTitle": "What is Java?",
+    "option1": "Programming Language",
+    "option2": "Database",
+    "option3": "OS",
+    "option4": "Browser",
+    "rightanswer": "Programming Language"
+  },
+  {
+    "questionTitle": "What is Spring Boot?",
+    "option1": "Framework",
+    "option2": "Game",
+    "option3": "Tool",
+    "option4": "IDE",
+    "rightanswer": "Framework"
+  },
+  {
+    "questionTitle": "Which keyword is used for inheritance?",
+    "option1": "this",
+    "option2": "super",
+    "option3": "extends",
+    "option4": "implements",
+    "rightanswer": "extends"
+  },
+  {
+    "questionTitle": "Which company developed Java?",
+    "option1": "Microsoft",
+    "option2": "Apple",
+    "option3": "Sun Microsystems",
+    "option4": "Google",
+    "rightanswer": "Sun Microsystems"
+  },
+  {
+    "questionTitle": "What is JVM?",
+    "option1": "Java Virtual Machine",
+    "option2": "Java Variable Method",
+    "option3": "Java Version Manager",
+    "option4": "None",
+    "rightanswer": "Java Virtual Machine"
+  },
+  {
+    "questionTitle": "Which method is the entry point of Java program?",
+    "option1": "start()",
+    "option2": "main()",
+    "option3": "run()",
+    "option4": "init()",
+    "rightanswer": "main()"
+  },
+  {
+    "questionTitle": "Which keyword is used to create object?",
+    "option1": "new",
+    "option2": "create",
+    "option3": "object",
+    "option4": "class",
+    "rightanswer": "new"
+  },
+  {
+    "questionTitle": "Which is not a Java feature?",
+    "option1": "Object-oriented",
+    "option2": "Portable",
+    "option3": "Use of pointers",
+    "option4": "Secure",
+    "rightanswer": "Use of pointers"
+  },
+  {
+    "questionTitle": "Which package is imported by default?",
+    "option1": "java.util",
+    "option2": "java.lang",
+    "option3": "java.io",
+    "option4": "java.net",
+    "rightanswer": "java.lang"
+  },
+  {
+    "questionTitle": "What is JDK?",
+    "option1": "Java Development Kit",
+    "option2": "Java Design Kit",
+    "option3": "Java Debug Kit",
+    "option4": "None",
+    "rightanswer": "Java Development Kit"
+  },
+  {
+    "questionTitle": "Which keyword is used to inherit class?",
+    "option1": "extends",
+    "option2": "implements",
+    "option3": "import",
+    "option4": "package",
+    "rightanswer": "extends"
+  },
+  {
+    "questionTitle": "What is OOP?",
+    "option1": "Object Oriented Programming",
+    "option2": "Only One Program",
+    "option3": "Object Order Process",
+    "option4": "None",
+    "rightanswer": "Object Oriented Programming"
+  },
+  {
+    "questionTitle": "Which loop executes at least once?",
+    "option1": "for",
+    "option2": "while",
+    "option3": "do-while",
+    "option4": "none",
+    "rightanswer": "do-while"
+  },
+  {
+    "questionTitle": "Which data type is used for text?",
+    "option1": "int",
+    "option2": "float",
+    "option3": "String",
+    "option4": "char",
+    "rightanswer": "String"
+  },
+  {
+    "questionTitle": "Which symbol is used to end statement in Java?",
+    "option1": ".",
+    "option2": ",",
+    "option3": ";",
+    "option4": ":",
+    "rightanswer": ";"
+  }
+]

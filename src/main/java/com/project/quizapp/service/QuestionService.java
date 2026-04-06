@@ -1,23 +1,27 @@
 package com.project.quizapp.service;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.quizapp.entity.Question;
-import com.project.quizapp.repository.QuestionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
+import java.io.InputStream;
 import java.util.List;
 
 @Service
 public class QuestionService {
 
-    @Autowired
-    private QuestionRepository questionRepository;
-
     public List<Question> getAllQuestions() {
-        return questionRepository.findAll();
-    }
+        try {
+            ObjectMapper mapper = new ObjectMapper();
 
-    public Question addQuestion(Question question) {
-        return questionRepository.save(question);
+            InputStream inputStream = new ClassPathResource("questions.json").getInputStream();
+
+            return mapper.readValue(inputStream, new TypeReference<List<Question>>() {});
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
